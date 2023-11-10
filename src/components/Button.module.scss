@@ -1,10 +1,49 @@
 .btn_primary {
-    width: 100px;
-    height: 40px;
+  width: 100px;
+  height: 40px;
 
-    margin: 20px;
-    border-radius: 20px;
+  margin: 20px;
+  border-radius: 20px;
 
-    background-color: #fd5962;
-    color: white;
+  background-color: #fd5962;
+  color: white;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn_category {
+  width: 100px;
+  height: 100px;
+
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+
+  background-color: #ebf5ff;
+  color: black;
+
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 90px;
+  &:hover {
+    cursor: pointer;
+  }
+
+  svg {
+    display: block;
+    margin: 0px auto;
+    font-size: 1.5rem;
+  }
+  span {
+    padding: 5px 6px;
+    text-align: center;
+  }
 }
