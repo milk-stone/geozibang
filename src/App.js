@@ -1,43 +1,19 @@
 
 import React from 'react';
+import Home from './Home';
+
+import { Link, Route, Switch, Routes, BrrowserRouter, BrowserRouter } from 'react-router-dom';
 
 
-class App extends React.Component {
-render() {
+function App() {
   return (
-    <div style={styles.container}>
-      <div style={styles.statusBar}>
-        <img
-              src = "/status-bar.png"
-              alt="Status Bar"
-              style={{ width: '100%', height: '100%' }}
-            />
-      </div>
-      <div style = {styles.menuBar}>
-      </div>
+    <div className='App'>
+      <BrowserRouter>
+        <Routes>
+          <Route path = '/' Component={Home} />
+        </Routes>  
+      </BrowserRouter>
     </div>
   );
 }
-}
-
-const styles = {
-container: {
-  width: '393px', 
-  height: '852px',
-  paddingTop: '0px', 
-  backgroundColor:'#D4E9F8',
-  margin :'auto',
-},
-statusBar: {
-  height: '47px', 
-},
-menuBar: {
-  position : 'absolute',
-  bottom :'0',
-  width: '393px',
-  height: '90px',
-  backgroundColor: '#F8F8F8',
-}
-};
-
 export default App;
