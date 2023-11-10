@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import React from 'react';
+
+
+class App extends React.Component {
+render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={styles.container}>
+      <div style={styles.statusBar}>
+        <img
+              src = "/status-bar.png"
+              alt="Status Bar"
+              style={{ width: '100%', height: '100%' }}
+            />
+      </div>
+      <div style = {styles.menuBar}>
+      </div>
     </div>
   );
 }
+}
+
+const styles = {
+container: {
+  width: '393px', 
+  height: '852px',
+  paddingTop: '0px', 
+  backgroundColor:'#D4E9F8',
+  margin :'auto',
+},
+statusBar: {
+  height: '47px', 
+},
+menuBar: {
+  position : 'absolute',
+  bottom :'0',
+  width: '393px',
+  height: '90px',
+  backgroundColor: '#F8F8F8',
+}
+};
 
 export default App;
