@@ -26,3 +26,42 @@ export const PriorityButton = ({ children, ...rest }) => {
     </button>
   );
 };
+
+export const CheckButton = ({ icon, children, ...rest }) => {
+  return (
+    <button className={styles.btn_check} {...rest}>
+      <FontAwesomeIcon icon={icon} />
+      <span>{children}</span>
+    </button>
+  );
+};
+
+export const PeriodButton = ({
+  icon,
+  text,
+  prevConsume,
+  curConsume,
+  children,
+  ...rest
+}) => {
+  return (
+    <button className={styles.btn_period} {...rest}>
+      <FontAwesomeIcon icon={icon} />
+      <h2>{text}</h2>
+      {prevConsume <= curConsume ? (
+        <p className={styles.red}>{curConsume}</p>
+      ) : (
+        <p className={styles.blue}>{curConsume}</p>
+      )}
+      <p>{prevConsume}</p>
+    </button>
+  );
+};
+
+export const SettingButton = ({ children, ...rest }) => {
+  return (
+    <div className={styles.btn_setting}>
+      <span>{children}</span>
+    </div>
+  );
+};

@@ -51,4 +51,78 @@
 .btn_priority {
   width: 80px;
   height: 30px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn_check {
+  width: 30px;
+  height: 30px;
+  margin: 0px 0px;
+
+  background-color: white;
+  svg {
+    justify-content: left;
+    display: flex;
+    font-size: 1.5rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn_period {
+  width: 80%;
+  height: 80px;
+  margin: 20px auto;
+  display: flex;
+
+  border-radius: 20px;
+  background-color: aliceblue;
+
+  justify-content: space-around;
+  align-items: center;
+
+  svg {
+    display: flex;
+    margin: auto 20px;
+    font-size: 1.5rem;
+  }
+  h2 {
+    width: 120px;
+    text-align: center;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn_setting {
+  width: 80%;
+  height: 40px;
+
+  margin: 10px auto;
+
+  display: flex;
+  border-radius: 20px;
+  background-color: aliceblue;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.red {
+  color: red;
+}
+.blue {
+  color: blue;
 }

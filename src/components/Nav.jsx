@@ -23,10 +23,10 @@ export const NavBottom = () => {
   return (
     <nav className={styles.wrapper}>
       <ul className={styles.container}>
-        <NavItem to="/consume" icon={faDollarSign} text="소비보기" />
-        <NavItem to="/calendar" icon={faCalendar} text="달력보기" />
-        <NavItem to="/period" icon={faStopwatch} text="지출보기" />
-        <NavItem to="/settings" icon={faGear} text="환경설정" />
+        <NavItem to="/consume" icon={faDollarSign} text="소비 보기" />
+        <NavItem to="/calendar" icon={faCalendar} text="달력 보기" />
+        <NavItem to="/period" icon={faStopwatch} text="기간별 보기" />
+        <NavItem to="/settings" icon={faGear} text="환경 설정" />
       </ul>
     </nav>
   );
