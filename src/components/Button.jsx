@@ -10,15 +10,17 @@ export const Button = ({ children, ...rest }) => {
   );
 };
 
-export const CategoryButton = ({ icon, children, ...rest }) => {
+
+export const CategoryButton = ({ image, children, ...rest }) => {
   return (
     <button className={styles.btn_category} {...rest}>
-      <FontAwesomeIcon icon={icon}></FontAwesomeIcon>
+      <img src={image} alt ="category icon" width = "20" />
       <span>{children}</span>
     </button>
   );
 };
 
+//회색으로 쌓여있는 우선순위 버튼
 export const PriorityButton = ({ children, ...rest }) => {
   return (
     <button className={styles.btn_priority} {...rest}>
@@ -27,6 +29,7 @@ export const PriorityButton = ({ children, ...rest }) => {
   );
 };
 
+//체크박스
 export const CheckButton = ({ icon, children, ...rest }) => {
   return (
     <button className={styles.btn_check} {...rest}>
@@ -58,9 +61,9 @@ export const PeriodButton = ({
   );
 };
 
-export const SettingButton = ({ children, ...rest }) => {
+export const SettingButton = ({ children,onClick, ...rest }) => {
   return (
-    <div className={styles.btn_setting}>
+    <div className={styles.btn_setting} onClick={onClick}>
       <span>{children}</span>
     </div>
   );

@@ -6,7 +6,7 @@ import { PeriodButton } from "../components/Button";
 export default function PeriodPage() {
   return (
     <MainLayout>
-      <Title icon={faStopwatch}>기간별 보기</Title>
+      <Title>기간별 보기</Title>
       <PeriodButton
         icon={faStopwatch}
         text="전 년 대비"

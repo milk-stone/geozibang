@@ -25,6 +25,12 @@ export default function CalendarPage() {
     //오늘 날짜 기준으로 state 설정
  
     useEffect(() => {
+        fetch("http://13.209.254.86:8080/sobi/readAll")
+          .then((response) => response.json())
+          .then((data) => console.log(data))
+          .catch((error) => console.error(error));
+
+
         //dummyData는 json으로 받아온다고 가정, utils/dummyData.json에 있음
         //백에서 받은 json이용해서 날짜 파싱(어차피 특정일 선택은 한번만 해도 되므로 딱 한번만)
         const priorityButton =
@@ -41,7 +47,7 @@ export default function CalendarPage() {
   return (
     <MainLayout>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <Title icon={faCalendar}>달력 보기</Title>
+        <Title>달력 보기</Title>
         <DateCalendar
           value={value}
           onChange={(newValue) => setValue(newValue)}

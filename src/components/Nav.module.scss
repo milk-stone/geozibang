@@ -1,4 +1,4 @@
-$border-radius: 20px;
+$border-radius: 25px;
 
 .wrapper {
   position: fixed;
@@ -21,7 +21,9 @@ $border-radius: 20px;
 
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
-  box-shadow: 0px 5px 50px #ccc;
+  //border-radius: 15px;
+  background-color: #F4F4F4;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.10);
 
   list-style: none;
 }
@@ -29,17 +31,19 @@ $border-radius: 20px;
 .item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  //justify-content: center;
+  align-items: center;
+  text-align: center;
   width: 70px;
   font-size: 0.8rem;
 
-  svg {
-    display: block;
-    margin: 0px auto;
-    font-size: 1.5rem;
-  }
+  
   p {
+    color:#3E3E3E;
+    margin-top:8px;
+    margin-bottom :2px;
+    font-weight:550;
     padding: 5px 0px;
-    text-align: center;
+
   }
 }
