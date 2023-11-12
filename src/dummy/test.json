@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "ranking": 1,
+    "category": "must",
+    "sobiname": "test1",
+    "money": 10000,
+    "check": 0,
+    "date": {
+      "year": 2023,
+      "month": 11,
+      "day": 8
+    }
+  },
+  {
+    "id": 2,
+    "ranking": 2,
+    "category": "must",
+    "sobiname": "test2",
+    "money": 21000,
+    "check": 1,
+    "date": {
+      "year": 2023,
+      "month": 11,
+      "day": 8
+    }
+  },
+  {
+    "id": 3,
+    "ranking": 3,
+    "category": "must",
+    "sobiname": "test3",
+    "money": 32100,
+    "check": 1,
+    "date": {
+      "year": 2023,
+      "month": 11,
+      "day": 8
+    }
+  },
+  {
+    "id": 4,
+    "ranking": 2,
+    "category": "must",
+    "sobiname": "test4",
+    "money": 432100,
+    "check": 0,
+    "date": {
+      "year": 2023,
+      "month": 11,
+      "day": 8
+    }
+  }
+]
