@@ -87,18 +87,28 @@
   }
 }
 
+
 .btn_period {
   width: 80%;
-  height: 80px;
+  height: 120px;
   margin: 50px auto;
   display: flex;
 
+  // border-radius: 20px;
+  // background-color: aliceblue;
+  border-color: black;
+
   border-radius: 20px;
-  background-color: aliceblue;
+  background-color: #ffffff;
+  box-shadow: 3px 10px 15px rgba(0, 0, 0, 0.1);
+  flex: 1 0 90px;
 
   justify-content: space-around;
   align-items: center;
 
+  img {
+    margin-left: 20px;
+  }
   svg {
     display: flex;
     margin: auto 20px;
@@ -108,6 +118,10 @@
     width: 120px;
     text-align: center;
   }
+  p {
+    font-style: italic;
+    margin-right: 20px;
+  }
 
   &:hover {
     cursor: pointer;
@@ -115,15 +129,16 @@
 }
 
 .btn_setting {
-  width: 80%;
-  height: 40px;
+  width: 50%;
+  height: 80px;
 
-  margin: 10px auto;
+  margin-bottom: 30px;
+  margin: 20px auto;
 
   display: flex;
   border-radius: 15px;
   background-color: #fff;
-  box-shadow: 3px 10px 15px rgba(0, 0, 0, 0.10);
+  box-shadow: 3px 10px 15px rgba(0, 0, 0, 0.1);
 
   justify-content: center;
   align-items: center;
@@ -135,8 +150,10 @@
 }
 
 .red {
+  font-style: italic;
   color: red;
 }
 .blue {
+  font-style: italic;
   color: blue;
 }
