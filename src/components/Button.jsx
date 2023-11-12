@@ -20,8 +20,9 @@ export const CategoryButton = ({ image, children, ...rest }) => {
   );
 };
 
-//회색으로 쌓여있는 우선순위 버튼
-export const PriorityButton = ({ children, ...rest }) => {
+
+//회색으로 쌓여있는 버튼
+export const GrayButton = ({ children, ...rest }) => {
   return (
     <button className={styles.btn_priority} {...rest}>
       {children}
@@ -29,11 +30,12 @@ export const PriorityButton = ({ children, ...rest }) => {
   );
 };
 
+ 
 //체크박스
-export const CheckButton = ({ icon, children, ...rest }) => {
+export const CheckButton = ({ image, children, ...rest }) => {
   return (
     <button className={styles.btn_check} {...rest}>
-      <FontAwesomeIcon icon={icon} />
+      <img src = {image} width="15" height="15" />
       <span>{children}</span>
     </button>
   );
