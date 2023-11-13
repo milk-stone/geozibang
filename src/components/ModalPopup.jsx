@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./ModalPopup.module.scss";
 
 const ModalPopup = ({ onClose }) => {
-  const [ranking, setRanking] = useState(1);
+  const [ranking, setRanking] = useState("1");
   const [category, setCategory] = useState("");
   const [sobiname, setSobiname] = useState("");
   const [money, setMoney] = useState("");
@@ -68,37 +68,77 @@ const ModalPopup = ({ onClose }) => {
         <button className={styles.closeButton} onClick={onClose}>
           X
         </button>
-        <form>
-          <label htmlFor="label">우선순위 :</label>
-          {/* <select id="ranking">
-            <option value={1} onChange={{ handlePriorityChange }}>
-              1순위
-            </option>
-            <option value={2} onChange={{ handlePriorityChange }}>
-              2순위
-            </option>
-            <option value={3} onChange={{ handlePriorityChange }}>
-              3순위
-            </option>
-          </select> */}
+        <div className={styles.formBorder}>
+          <div className={styles.set}>
+            <label htmlFor="label">우선순위 :</label>
+            <select
+              id="ranking"
+              value={ranking}
+              onChange={handlePriorityChange}
+              className={styles.border}
+            >
+              <option value="1">1순위</option>
+              <option value="2">2순위</option>
+              <option value="3">3순위</option>
+            </select>
+          </div>
 
-          <input id="ranking" type="text" onChange={handlePriorityChange} />
-          <br />
-          <label htmlFor="label">카테고리 :</label>
-          <input id="category" type="text" onChange={handleCategoryChange} />
-          <br />
-          <label htmlFor="label">소비내역 :</label>
-          <input id="sobiname" type="text" onChange={handleExpenseChange} />
-          <br />
-          <label htmlFor="label">금액 :</label>
-          <input id="money" type="text" onChange={handleAmountChange} />
-          <br />
-          <label htmlFor="label">날짜 :</label>
-          <input id="date" type="date" onChange={handleDateChange} />
-          <br />
-          <label htmlFor="label">구매 여부 :</label>
-          <input id="checking" type="text" onChange={handleCheckingChange} />
-          <br />
+          <div className={styles.set}>
+            <label htmlFor="label">카테고리 :</label>
+            <select
+              id="category"
+              value={category}
+              onChange={handleCategoryChange}
+              className={styles.border}
+            >
+              <option value="food">음식</option>
+              <option value="fashion">패션</option>
+              <option value="hobby">취미</option>
+              <option value="health">건강</option>
+              <option value="transport">교통</option>
+            </select>
+          </div>
+          <div className={styles.set}>
+            <label htmlFor="label">소비내역 :</label>
+            <input
+              id="sobiname"
+              type="text"
+              onChange={handleExpenseChange}
+              className={styles.border}
+            />
+          </div>
+          <div className={styles.set}>
+            <label htmlFor="label">금액 :</label>
+            <input
+              id="money"
+              type="text"
+              onChange={handleAmountChange}
+              className={styles.border}
+            />
+          </div>
+
+          <div className={styles.set}>
+            <label htmlFor="label">날짜 :</label>
+            <input
+              id="date"
+              type="date"
+              onChange={handleDateChange}
+              className={styles.border}
+            />
+          </div>
+          <div className={styles.set}>
+            <label htmlFor="label">구매 여부 :</label>
+            <select
+              id="checking"
+              value={checking}
+              onChange={handleCheckingChange}
+              className={styles.border}
+            >
+              <option value="1">구매 완료</option>
+              <option value="0">구매 예정</option>
+            </select>
+          </div>
+
           <button
             type="click"
             onClick={handleSubmit}
@@ -107,7 +147,7 @@ const ModalPopup = ({ onClose }) => {
           >
             Submit
           </button>
-        </form>
+        </div>
       </div>
     </div>
   );

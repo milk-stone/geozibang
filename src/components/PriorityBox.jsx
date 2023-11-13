@@ -54,6 +54,7 @@ export const PriorityBox = (props) => {
       });
     setIsModalOpen(false);
   };
+
   return (
     <div className={styles.container}>
       <PriorityButton onClick={handlePriorityButtonClick}>
