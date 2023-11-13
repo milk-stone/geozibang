@@ -3,11 +3,11 @@ import styles from "./ModalPopup.module.scss";
 
 const ModalPopup = ({ onClose }) => {
   const [ranking, setRanking] = useState("1");
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("food");
   const [sobiname, setSobiname] = useState("");
   const [money, setMoney] = useState("");
   const [dateobj, setDate] = useState("");
-  const [checking, setChecking] = useState("");
+  const [checking, setChecking] = useState("0");
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
   const handleSubmit = (event) => {
@@ -39,7 +39,7 @@ const ModalPopup = ({ onClose }) => {
     setIsButtonDisabled(true);
   };
 
-  const handlePriorityChange = (event) => {
+  const handleRankingChange = (event) => {
     setRanking(event.target.value);
   };
 
@@ -47,11 +47,11 @@ const ModalPopup = ({ onClose }) => {
     setCategory(event.target.value);
   };
 
-  const handleExpenseChange = (event) => {
+  const handleSobinameChange = (event) => {
     setSobiname(event.target.value);
   };
 
-  const handleAmountChange = (event) => {
+  const handleMoneyChange = (event) => {
     setMoney(event.target.value);
   };
 
@@ -74,7 +74,7 @@ const ModalPopup = ({ onClose }) => {
             <select
               id="ranking"
               value={ranking}
-              onChange={handlePriorityChange}
+              onChange={handleRankingChange}
               className={styles.border}
             >
               <option value="1">1순위</option>
@@ -103,7 +103,7 @@ const ModalPopup = ({ onClose }) => {
             <input
               id="sobiname"
               type="text"
-              onChange={handleExpenseChange}
+              onChange={handleSobinameChange}
               className={styles.border}
             />
           </div>
@@ -112,7 +112,7 @@ const ModalPopup = ({ onClose }) => {
             <input
               id="money"
               type="text"
-              onChange={handleAmountChange}
+              onChange={handleMoneyChange}
               className={styles.border}
             />
           </div>
@@ -134,8 +134,8 @@ const ModalPopup = ({ onClose }) => {
               onChange={handleCheckingChange}
               className={styles.border}
             >
-              <option value="1">구매 완료</option>
               <option value="0">구매 예정</option>
+              <option value="1">구매 완료</option>
             </select>
           </div>
 
