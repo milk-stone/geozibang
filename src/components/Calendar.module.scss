@@ -1,31 +1,33 @@
 .calendar_date {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    width: 120px;
-    height: 40px;
+  width: 120px;
+  height: 40px;
 
-    border-radius: 20px;
+  border-radius: 20px;
 
-    background-color: #0057a8;
-    color: #fff;
+  background-color: #0057a8;
+  color: #fff;
 
-    font-size: 1.2rem;
-    font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .calendar_event {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px;
 
-    font-size: 1.2rem;
-    font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .container {
-    margin: 0px auto;
-    width: 80%;
-    max-width: 500px;
+  margin: 0px auto;
+  width: 80%;
+  max-width: 500px;
+
+  margin-bottom: 100px;
 }

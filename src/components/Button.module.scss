@@ -23,12 +23,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow:auto;
+  overflow: auto;
 
   border-radius: 20px;
   background-color: #fff;
   box-shadow: 3px 10px 15px rgba(0, 0, 0, 0.08);
-  flex:1 0 90px;
+  flex: 1 0 90px;
   &:hover {
     cursor: pointer;
   }
@@ -36,15 +36,15 @@
   &:hover {
     transform: scale(1.1);
   }
-  img{
-    display:block;
-    margin-top:13px;
+  img {
+    display: block;
+    margin-top: 13px;
   }
   span {
     font-size: 13.5px;
-    text-shadow:0px 3px 4px rgba(0, 0, 0, 0.05);
-    font-weight:640;
-    margin-top:3px;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.05);
+    font-weight: 640;
+    margin-top: 3px;
     padding: 5px 6px;
     text-align: center;
   }
@@ -53,20 +53,19 @@
 .btn_priority {
   width: 80px;
   height: 30px;
-  border-radius:5px;
+  border-radius: 5px;
   &:hover {
     cursor: pointer;
   }
-  margin:0px auto auto 30px;
-  span{
-    font-weight:700;
+  margin: 0px auto auto 30px;
+  span {
+    font-weight: 700;
   }
-  .imageWrapper{
-    margin-left:5px;
-    margin-top:5px;
+  .imageWrapper {
+    margin-left: 5px;
+    margin-top: 5px;
   }
 }
-
 
 .btn_check {
   width: 30px;
@@ -79,14 +78,13 @@
     display: flex;
     font-size: 1.5rem;
   }
-  span{
+  span {
     font-weight: 600;
   }
   &:hover {
     cursor: pointer;
   }
 }
-
 
 .btn_period {
   width: 80%;
@@ -156,4 +154,13 @@
 .blue {
   font-style: italic;
   color: blue;
+}
+
+.explain {
+  margin: auto 0px;
+}
+
+.smallsize {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
 }

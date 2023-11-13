@@ -111,18 +111,21 @@ export default function PeriodPage() {
       <Title>기간별 보기</Title>
       <PeriodButton
         image={yearImage}
+        periodName={"Year"}
         text="전 년 대비"
         prevConsume={sobiLastYearTotal}
         curConsume={sobiCurYearTotal}
       ></PeriodButton>
       <PeriodButton
         image={monthImage}
+        periodName={"Month"}
         text="전 월 대비"
         prevConsume={sobiLastMonthTotal}
         curConsume={sobiCurMonthTotal}
       ></PeriodButton>
       <PeriodButton
         image={dayImage}
+        periodName={"Day"}
         text="전 일 대비"
         prevConsume={sobiYesterdayTotal}
         curConsume={sobiTodayTotal}
