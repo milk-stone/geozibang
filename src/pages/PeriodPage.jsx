@@ -1,5 +1,4 @@
 import MainLayout from "../layouts/MainLayout";
-import { faStopwatch } from "@fortawesome/free-solid-svg-icons";
 import { Title } from "../components/Title";
 import { PeriodButton } from "../components/Button";
 import { useState, useEffect } from "react";

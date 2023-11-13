@@ -1,5 +1,4 @@
 import styles from "./Button.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Button = ({ children, ...rest }) => {
   return (

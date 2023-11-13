@@ -1,13 +1,5 @@
 import MainLayout from "../layouts/MainLayout";
 import { CategoryButton } from "../components/Button";
-import {
-  faBolt,
-  faDollarSign,
-  faShirt,
-  faBowlFood,
-  faPencil,
-  faWandMagicSparkles,
-} from "@fortawesome/free-solid-svg-icons";
 import styles from "./ConsumePage.module.scss";
 import { Title } from "../components/Title";
 import { PriorityBox } from "../components/PriorityBox";

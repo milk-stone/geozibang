@@ -1,10 +1,8 @@
 import MainLayout from "../layouts/MainLayout";
-import { faGear } from "@fortawesome/free-solid-svg-icons";
 import { Title } from "../components/Title";
 import { SettingButton } from "../components/Button";
 import styles from "./SettingsPage.module.scss";
 import { useState } from "react";
-import { useEffect } from "react";
 export default function SettingsPage() {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
   const handleSettingButtonClick = () => {
