@@ -86,8 +86,9 @@ export default function PeriodPage() {
   // 저번 달
   const sobiLastMonthList = jsonData.filter(
     (d) =>
-      d.date.month === (todayMonth === 1 ? 12 : todayMonth - 1) &&
-      d.date.year === (todayMonth === 1 ? todayYear - 1 : todayYear)
+      d.date.month === todayMonth - 1 &&
+      d.date.year ===
+        (todayMonth === 1 && todayDay === 1 ? todayYear - 1 : todayYear)
   );
   const sobiLastMonthTotal = sobiLastMonthList.reduce(
     (acc, item) => acc + item.money,
