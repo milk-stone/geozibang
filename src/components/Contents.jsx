@@ -3,6 +3,7 @@ import blankCheck from "../images/blankcheck.png";
 import checkedBox from "../images/checkedBox.png";
 
 import { CheckButton } from "./Button";
+
 export const Contents = (props) => {
   return (
     <div className={styles.content}>
