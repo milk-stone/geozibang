@@ -14,35 +14,37 @@
 }
 
 .btn_category {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
 
-  padding: 10px;
+  margin: 20px 6px;
 
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: center;
+  overflow: auto;
 
-  border-radius: 10px;
-
-  background-color: #ebf5ff;
-  color: black;
-
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 90px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 3px 10px 15px rgba(0, 0, 0, 0.08);
+  flex: 1 0 90px;
   &:hover {
     cursor: pointer;
   }
-
-  svg {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+  img {
     display: block;
-    margin: 0px auto;
-    font-size: 1.5rem;
+    margin-top: 13px;
   }
   span {
+    font-size: 13.5px;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.05);
+    font-weight: 640;
+    margin-top: 3px;
     padding: 5px 6px;
     text-align: center;
   }
@@ -51,9 +53,17 @@
 .btn_priority {
   width: 80px;
   height: 30px;
-
+  border-radius: 5px;
   &:hover {
     cursor: pointer;
+  }
+  margin: 0px auto auto 30px;
+  span {
+    font-weight: 700;
+  }
+  .imageWrapper {
+    margin-left: 5px;
+    margin-top: 5px;
   }
 }
 
@@ -68,7 +78,9 @@
     display: flex;
     font-size: 1.5rem;
   }
-
+  span {
+    font-weight: 600;
+  }
   &:hover {
     cursor: pointer;
   }
@@ -76,16 +88,25 @@
 
 .btn_period {
   width: 80%;
-  height: 80px;
-  margin: 20px auto;
+  height: 120px;
+  margin: 50px auto;
   display: flex;
 
+  // border-radius: 20px;
+  // background-color: aliceblue;
+  border-color: black;
+
   border-radius: 20px;
-  background-color: aliceblue;
+  background-color: #ffffff;
+  box-shadow: 3px 10px 15px rgba(0, 0, 0, 0.1);
+  flex: 1 0 90px;
 
   justify-content: space-around;
   align-items: center;
 
+  img {
+    margin-left: 20px;
+  }
   svg {
     display: flex;
     margin: auto 20px;
@@ -95,6 +116,10 @@
     width: 120px;
     text-align: center;
   }
+  p {
+    font-style: italic;
+    margin-right: 20px;
+  }
 
   &:hover {
     cursor: pointer;
@@ -102,14 +127,16 @@
 }
 
 .btn_setting {
-  width: 80%;
-  height: 40px;
+  width: 50%;
+  height: 80px;
 
-  margin: 10px auto;
+  margin-bottom: 30px;
+  margin: 20px auto;
 
   display: flex;
-  border-radius: 20px;
-  background-color: aliceblue;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 3px 10px 15px rgba(0, 0, 0, 0.1);
 
   justify-content: center;
   align-items: center;
@@ -121,8 +148,19 @@
 }
 
 .red {
+  font-style: italic;
   color: red;
 }
 .blue {
+  font-style: italic;
   color: blue;
+}
+
+.explain {
+  margin: auto 0px;
+}
+
+.smallsize {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
 }

@@ -1,5 +1,4 @@
 import styles from "./Button.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Button = ({ children, ...rest }) => {
   return (
@@ -10,16 +9,17 @@ export const Button = ({ children, ...rest }) => {
   );
 };
 
-export const CategoryButton = ({ icon, children, ...rest }) => {
+export const CategoryButton = ({ image, children, ...rest }) => {
   return (
     <button className={styles.btn_category} {...rest}>
-      <FontAwesomeIcon icon={icon}></FontAwesomeIcon>
+      <img src={image} alt="category icon" width="20" />
       <span>{children}</span>
     </button>
   );
 };
 
-export const PriorityButton = ({ children, ...rest }) => {
+//회색으로 쌓여있는 버튼
+export const GrayButton = ({ children, ...rest }) => {
   return (
     <button className={styles.btn_priority} {...rest}>
       {children}
@@ -27,17 +27,19 @@ export const PriorityButton = ({ children, ...rest }) => {
   );
 };
 
-export const CheckButton = ({ icon, children, ...rest }) => {
+//체크박스
+export const CheckButton = ({ image, children, ...rest }) => {
   return (
     <button className={styles.btn_check} {...rest}>
-      <FontAwesomeIcon icon={icon} />
+      <img src={image} width="15" height="15" />
       <span>{children}</span>
     </button>
   );
 };
 
 export const PeriodButton = ({
-  icon,
+  image,
+  periodName,
   text,
   prevConsume,
   curConsume,
@@ -46,21 +48,27 @@ export const PeriodButton = ({
 }) => {
   return (
     <button className={styles.btn_period} {...rest}>
-      <FontAwesomeIcon icon={icon} />
+      <img src={image} width="30" height="30" />
       <h2>{text}</h2>
-      {prevConsume <= curConsume ? (
-        <p className={styles.red}>{curConsume}</p>
-      ) : (
-        <p className={styles.blue}>{curConsume}</p>
-      )}
-      <p>{prevConsume}</p>
+      <div className={styles.explain}>
+        <p className={styles.smallsize}>Current {periodName}</p>
+        {prevConsume <= curConsume ? (
+          <p className={styles.red}>{curConsume.toLocaleString()}원</p>
+        ) : (
+          <p className={styles.blue}>{curConsume.toLocaleString()}원</p>
+        )}
+      </div>
+      <div className={styles.explain}>
+        <p className={styles.smallsize}>Last {periodName}</p>
+        <p>{prevConsume.toLocaleString()}원</p>
+      </div>
     </button>
   );
 };
 
-export const SettingButton = ({ children, ...rest }) => {
+export const SettingButton = ({ children, onClick, ...rest }) => {
   return (
-    <div className={styles.btn_setting}>
+    <div className={styles.btn_setting} onClick={onClick}>
       <span>{children}</span>
     </div>
   );
